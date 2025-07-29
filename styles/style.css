@@ -200,10 +200,19 @@ body {
   }
 
   .header__nav {
-    display: none;
+    pointer-events: none;
+    display: block;
     position: absolute;
     top: 0%;
     left: 0%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+
+  .header__nav.mobile-open {
+    visibility: visible;
+    opacity: 1;
   }
 
   .header__nav-lists {
