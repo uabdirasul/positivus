@@ -91,7 +91,7 @@ body {
 
 /* header */
 .header {
-  padding: 3.75rem 0;
+  padding-top: 3.75rem;
 }
 
 .header__container {
@@ -134,7 +134,14 @@ body {
 
 .header__cta-button {
   padding: 1.25rem 2.25rem;
+  background-color: var(--color-white);
   color: black;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.header__cta-button:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 .header__toggler {
@@ -247,3 +254,79 @@ body {
   }
 }
 /* /header */
+
+/* hero */
+.hero {
+  padding-top: 4.375rem;
+}
+
+.hero__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero__texts {
+  max-width: 33.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2.25rem;
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.hero__description {
+  font-weight: normal;
+  font-size: clamp(0.875rem, 5vw, 1.25rem);
+  line-height: 1.75rem;
+}
+
+.hero__button {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding: 1.25rem 2.25rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.hero__button:hover {
+  background-color: var(--color-lime);
+  color: var(--color-black);
+}
+
+.hero__img {
+}
+
+@media screen and (max-width: 1000px) {
+  .hero__container {
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .hero__texts {
+    display: contents;
+  }
+
+  .hero__title {
+    order: 0;
+  }
+
+  .hero__img {
+    order: 1;
+  }
+
+  .hero__description {
+    order: 2;
+  }
+
+  .hero__button {
+    order: 3;
+  }
+}
+/* /hero */
