@@ -102,10 +102,11 @@ body {
 }
 
 .mobile-open {
-  display: none;
+  display: block !important;
 }
 
 .header__nav {
+  display: block;
   margin-left: auto;
 }
 
@@ -199,6 +200,7 @@ body {
   }
 
   .header__nav {
+    display: none;
     position: absolute;
     top: 0%;
     left: 0%;
