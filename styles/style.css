@@ -834,6 +834,12 @@ body {
 .team__description {
   max-width: 40ch;
 }
+.team-members__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
 
 .team-members__container {
   display: flex;
@@ -883,6 +889,23 @@ body {
   font-size: 1.125rem;
 }
 
+.team-members__button {
+  display: inline-flex;
+  justify-content: center;
+  align-self: flex-end;
+  padding: 1.25rem 4.75rem;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.team-members__button:hover {
+  background-color: var(--color-lime);
+  color: var(--color-black);
+}
+
 @media screen and (max-width: 900px) {
   .team-members__container {
     justify-content: space-evenly;
@@ -894,5 +917,98 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  .team-members__button {
+    width: 100%;
+  }
 }
 /* /team */
+
+/* testimonials */
+.testimonials {
+  margin-top: 6.25rem;
+  margin-bottom: 5rem;
+}
+
+.testimonials__description {
+  max-width: 45ch;
+  width: 100%;
+}
+
+.container-bg {
+  background-color: var(--color-dark-gray-1);
+  border-radius: 2rem;
+  margin-top: 5rem;
+  padding: 3%;
+}
+
+.testimonials-wrapper__container {
+  display: flex;
+  gap: 3.125rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.testimonials__item {
+  max-width: 37.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonials__item-text {
+  position: relative;
+  border-radius: 2rem;
+  border: 2px solid var(--color-lime);
+  padding: 3rem 3.25rem;
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.testimonials__item-text:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: var(--color-lime) transparent transparent;
+  border-width: 20px 20px 0;
+  bottom: -20px;
+  left: 24%;
+  margin-left: -20px;
+}
+
+.testimonials__item--author {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.testimonials__item--author-name {
+  color: var(--color-lime);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.testimonials__item--author-job {
+  color: var(--color-white);
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 800px) {
+  .container-bg {
+    margin-top: 1rem;
+  }
+  .testimonials-wrapper__container {
+    padding: 1rem 0;
+  }
+
+  .testimonials__item-text {
+    padding: 1rem;
+  }
+}
+/* /testimonials */
