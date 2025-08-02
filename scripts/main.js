@@ -7,6 +7,7 @@ toggler.addEventListener("click", () => {
   nav.classList.toggle("mobile-open");
 });
 
+// slider
 document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".testimonials-wrapper__container")) {
     tns({

@@ -4,12 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server --port=3000 --watch=."
+    "start": "live-server --port=3000 --watch=.",
+    "prod": "postcss ./styles/*.css -d ./dist/ --ext .min.css",
+    "dev:watch": "postcss ./styles/*.css -d ./dist/ --ext .min.css --watch"
   },
+  "browserslist": [
+    "last 4 versions",
+    "iOS >= 8",
+    "Safari >= 8",
+    "Chrome >= 21",
+    "Firefox >= 28",
+    "ie >= 10",
+    "> 1%"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "live-server": "^1.2.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cssnano": "^7.1.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1"
   }
 }
