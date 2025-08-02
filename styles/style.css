@@ -927,7 +927,6 @@ body {
 /* testimonials */
 .testimonials {
   margin-top: 6.25rem;
-  margin-bottom: 5rem;
 }
 
 .testimonials__description {
@@ -1012,3 +1011,105 @@ body {
   }
 }
 /* /testimonials */
+
+/* contact-us */
+.contact-us {
+  margin-top: 8.75rem;
+  margin-bottom: 5rem;
+}
+
+.contact-us__description {
+  max-width: 30ch;
+}
+.contact-us__form-container {
+  margin-top: 5rem;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  background-color: var(--color-light-gray);
+  padding-top: 3.75rem;
+  padding-left: 6.25rem;
+  padding-bottom: 3.75rem;
+  border-radius: 2rem;
+}
+
+.contact-us__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.625rem;
+  max-width: 34.75rem;
+  width: 100%;
+}
+
+.contact-us__radio {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.contact-us__radio-label {
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.contact-us__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.contact-us__item-text {
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: normal;
+}
+
+.contact-us__item-input,
+.contact-us__item-textarea {
+  color: #898989;
+  font-size: 1.125rem;
+  line-height: auto;
+  font-weight: normal;
+  padding: 1.125rem 1.875rem;
+  border-radius: 1rem;
+}
+
+.contact-us__button {
+  padding: 1.25rem;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 1.25rem;
+  line-height: 150%;
+  font-weight: normal;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.contact-us__button:hover {
+  background-color: var(--color-lime);
+  color: var(--color-black);
+}
+
+@media screen and (max-width: 785px) {
+  .contact-us__form-container {
+    padding: 3rem;
+    justify-content: center;
+  }
+  .contact-us__img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .contact-us__radio {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .contact-us__button {
+    padding: 0.875rem;
+  }
+}
+/* /contact-us */
